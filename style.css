@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ddbd82; /* Light pink background */
+    padding: 20px;
+
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden; /* To prevent content overflow issues */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.header .star {
+    font-size: 3em;
+    color: #ff4500; /* OrangeRed */
+    margin: 0 5px;
+    line-height: 0.8;
+}
+
+.header .title {
+    font-family: 'Shantell Sans', cursive; /* More playful font */
+    font-size: 2em;
+    color: #8b0000; /* DarkRed */
+    font-weight: bold;
+}
+
+.date {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 2.2em;
+    color: #8b0000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.invitation {
+    font-family: 'Dancing Script', cursive; /* Elegant, flowing font */
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.invitation .sparkle {
+    font-size: 1.2em;
+    color: #4682b4; /* SteelBlue */
+    margin: 0 5px;
+}
+
+.invitation .hand {
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.image-item {
+    width: 100%;
+    padding-top: 100%; /* Creates a square aspect ratio */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.detail-item {
+    font-size: 1em;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.detail-item .icon {
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+
+/* Specific icon colors to match the image */
+.detail-item:nth-child(1) .icon { color: #5cb85c; } /* green leaf */
+.detail-item:nth-child(2) .icon { color: #ffd700; } /* gold star */
+.detail-item:nth-child(3) .icon { color: #ff8c00; } /* dark orange sun */
+.detail-item:nth-child(4) .icon { color: #dc143c; } /* crimson heart/flower */
+.detail-item:nth-child(5) .icon { color: #da70d6; } /* orchid flower */
+.detail-item:nth-child(6) .icon { color: #4682b4; } /* steelblue bottle */
+.detail-item:nth-child(7) .icon { color: #f08080; } /* lightcoral gift */
+.detail-item:nth-child(8) .icon { color: #ff6347; } /* tomato watermelon */
+
+
+.price-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.price-section .star {
+    font-size: 2.5em;
+    color: #ff4500;
+    margin: 0 5px;
+    line-height: 0.8;
+}
+
+.price-section .price-text {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 1.5em;
+    color: #8b0000;
+    font-weight: bold;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.price-section .price {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 2em;
+    color: #006400; /* DarkGreen for price */
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .header .title {
+        font-size: 1.5em;
+    }
+
+    .date {
+        font-size: 1.8em;
+    }
+
+    .invitation {
+        font-size: 1.2em;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr; /* Stack on small screens */
+    }
+
+    .detail-item {
+        font-size: 0.9em;
+    }
+
+    .price-section .price-text {
+        font-size: 1.2em;
+    }
+
+    .price-section .price {
+        font-size: 1.7em;
+    }
+
+    .price-section .star {
+        font-size: 2em;
+    }
+}
+h5{
+    font-size: 20px;
+}
