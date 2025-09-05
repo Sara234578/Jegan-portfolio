@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aadhira Advert — Portfolio</title>
+  <meta name="description" content="Aadhira Advert — Creative Poster, Logo, Video Ads, Social Media & Website Design by C. Jegan" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+    :root{
+      --bg:#000000;
+      --gold:#FFD700;
+      --text:#FFD700;
+      --muted:rgba(255,215,0,0.12);
+      --glass: rgba(255,215,0,0.04);
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      scroll-behavior:smooth;
+    }
+
+    /* Container */
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* NAVBAR */
+.logo {
+  height: 36px;   /* adjust size as needed */
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+
+    header{position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.25));backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,215,0,0.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+    .brand{font-weight:700;letter-spacing:0.6px}
+    .navlinks{display:flex;gap:18px;align-items:center}
+    .navlinks a{color:var(--gold);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600;opacity:0.95}
+    .navlinks a:hover{background:var(--glass);box-shadow:0 4px 18px rgba(255,215,0,0.06);transform:translateY(-2px)}
+    .cta{border:1px solid var(--gold);padding:8px 12px;border-radius:10px}
+    .cta:hover{background:var(--gold);color:#000}
+
+    /* HERO */
+    
+    .hero{min-height:60vh;display:grid;align-items:center;gap:18px;padding:48px 0}
+    .hero-grid{display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:center}
+    .intro h1{font-size:clamp(28px,6vw,48px);margin:0 0 10px;line-height:1}
+    .intro p{margin:0 0 18px;color:rgba(255,215,0,0.9);font-weight:500}
+    .btn-primary{background:transparent;border:2px solid var(--gold);color:var(--gold);padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer}
+    .btn-primary:hover{background:var(--gold);color:#000;transform:translateY(-3px)}
+
+    .hero-card{background:linear-gradient(180deg,rgba(255,215,0,0.03), transparent);border:1px solid rgba(255,215,0,0.06);padding:20px;border-radius:16px}
+    .meta{font-size:14px;color:rgba(255,215,0,0.85)}
+     .hero-card {
+      width:450px;
+     }
+    /* SECTIONS */
+    section{padding:40px 0}
+    h2.section-title{font-size:20px;margin:0 0 18px;display:flex;align-items:center;gap:12px}
+    .muted{color:rgba(255,215,0,0.6);font-weight:500}
+
+    /* ABOUT */
+    /*.about{display:flex;gap:22px;align-items:center}
+    .about p{max-width:72ch}*/
+    /* Animation keyframes */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation */
+#about .section-title,
+#about .about p {
+  opacity: 0;
+  transform: translateX(-80px);
+  animation: slideInLeft 1.5s ease forwards;
+}
+
+/* Delay text so heading comes first */
+#about .about p {
+  animation-delay: 0.4s;
+}
+
+
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .service{background:linear-gradient(180deg, rgba(255,215,0,0.02), rgba(255,215,0,0.01));border:1px solid rgba(255,215,0,0.04);padding:20px;border-radius:12px;transition:transform .35s cubic-bezier(.2,.9,.26,1),box-shadow .35s;cursor:default}
+    .service:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 12px 40px rgba(255,215,0,0.05)}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0;color:rgba(255,215,0,0.75)}
+    
+
+
+    /* CONTACT */
+    .contact-form{max-width:720px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,215,0,0.08);padding:12px;border-radius:10px;color:var(--gold);outline:none}
+    input:focus,textarea:focus{border-color:var(--gold);box-shadow:0 8px 30px rgba(255,215,0,0.04)}
+    textarea{min-height:120px;resize:vertical}
+    .send{margin-top:12px;border:1px solid var(--gold);padding:12px 16px;border-radius:10px;background:transparent;color:var(--gold);font-weight:700;cursor:pointer}
+    .send:hover{background:var(--gold);color:#000}
+
+    /* FOOTER */
+    footer{padding:20px 0;text-align:center;border-top:1px solid rgba(255,215,0,0.03);font-size:14px;color:rgba(255,215,0,0.8)}
+
+    /* Animations */
+    .fade-in{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .in-view{opacity:1;transform:none}
+
+    /* Responsive adjustments */
+    @media (max-width:880px){
+      .hero-grid{grid-template-columns:1fr;}
+      .hero{padding:28px 0}
+      .navlinks{display:none}
+      .nav .menu-toggle{display:block}
+    }
+
+    /* small touches */
+    .gold-border{border-left:4px solid var(--gold);padding-left:12px}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="6179438726481038265.jpg" alt="Logo" class="logo" />
+      Aadhira Advert — <span style="font-weight:500">C. Jegan</span>
+    </div>
+    <nav class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="intro fade-in">
+          <h1>Aadhira Advert</h1>
+          <p class="muted">Premium creative services — Posters, Logos, Video Ads & Full social media management.</p>
+          <p class="meta">Owner: C. Jegan • Contact: 8122756400</p>
+          <div style="margin-top:18px">
+            <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Work with us</button>
+            <a href="#portfolio" style="margin-left:12px;text-decoration:none" class="btn-primary">View Projects</a>
+          </div>
+        </div>
+
+        <aside class="hero-card fade-in">
+           <img src="6179438726481038280.jpg" style="height:300px;width:400px">
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="fade-in">
+      <h2 class="section-title">About Me</h2>
+      <div class="about">
+        <div class="gold-border">
+          <p>At Aadhira Advert we blend creativity with strategy. I (C. Jegan) lead a compact team focused on producing high-quality posters, logos, video ads and complete social media solutions that help brands stand out. We craft clean visuals, strong messaging and measurable campaigns for small businesses and enterprises alike.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2 class="section-title">Services</h2>
+      <div class="services-grid">
+        <div class="service fade-in">
+           <img src="Copilot_20250828_095207.png" style="height: 200px;width: 200px;">
+          <h3>Creative Poster Designing</h3>
+          <p>High-resolution posters for print and social, designed to convert and catch the eye.</p>
+        </div>
+        <div class="service fade-in">
+           <img src="Copilot_20250830_084013.png" style="height: 200px;width: 200px;">
+          <h3>Logo Making</h3>
+          <p>Brand marks that communicate identity — scalable, memorable and modern.</p>
+        </div>
+        <div class="service fade-in">
+          <img src="Copilot_20250824_085959.png" style="height: 200px;width: 200px;">
+          <h3>Video Ad Making</h3>
+          <p>Slide videos, Concept Ads, Animation and Green screen videos tailored for platforms.</p>
+        </div>
+        <div class="service fade-in">
+           <img src="Copilot_20250828_094005.png" style="height: 200px;width: 200px;">
+          <h3>Social Media Page Maintenance</h3>
+          <p>Daily/weekly posting, captioning, and community engagement to keep your audience active.</p>
+        </div>
+        <div class="service fade-in">
+           <img src="Copilot_20250824_090613.png" style="height: 200px;width: 200px;">
+          <h3>Social Media Promotions</h3>
+          <p>Ad campaigns, boosts and targeted outreach to grow visibility and traffic.</p>
+        </div>
+        <div class="service fade-in">
+          <img src="Copilot_20250828_095636.png" style="height: 200px;width: 200px;">
+          <h3>Website Designing</h3>
+          <p>Clean, responsive websites that convert visitors into customers.</p>
+        </div>
+        <div class="service fade-in">
+          <img src="Copilot_20250828_102251.png" style="height: 200px;width: 200px;">
+        <h3>SEO (Search Engine Optimization)</h3>
+<p>Professional SEO services to rank higher on Google, drive traffic, and grow business.
+</p>
+        </div>
+        <div class="service fade-in">
+          <img src="Copilot_20250830_082544.png" style="height: 200px;width: 200px;">
+        <h3>Other Types of Ads</h3>
+<p>Auto Ads, Bus Ads, Flex, Stickers...
+</p>
+        </div>
+        
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="muted">Interested in working together? Send a message — we usually reply within 1-2 business days.</p>
+
+      
+        <form class="contact-form" onsubmit="sendEmail(event)">
+
+        <div class="form-row">
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+          <input id="email" name="email" type="email" placeholder="Your email" required />
+        </div>
+        <div style="margin-top:12px">
+          <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        </div>
+        <div>
+          <button class="send" type="submit">Send Message</button>
+        </div>
+      </form>
+      <div style="margin-top:18px;color:rgba(255,215,0,0.9)">Or call: <strong>8122756400</strong></div>
+    </section>
+
+  </main>
+
+  <footer></footer>
+    <div class="container">© <span id="year"></span> Aadhira Advert — C. Jegan. All rights reserved.</div>
+  </footer>
+
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Intersection Observer for fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.12});
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Smooth highlight current nav link
+    const navLinks = document.querySelectorAll('.navlinks a');
+    function highlightNav(){
+      let fromTop = window.scrollY + 80;
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.hash);
+        if(!section) return;
+        if(section.offsetTop <= fromTop && (section.offsetTop + section.offsetHeight) > fromTop){
+          link.style.opacity = '1';
+          link.style.boxShadow = '0 6px 20px rgba(255,215,0,0.03)';
+        } else {
+          link.style.opacity = '0.95';
+          link.style.boxShadow = 'none';
+        }
+      })
+    }
+    window.addEventListener('scroll', highlightNav);
+    highlightNav();
+
+    // Form handling (demo)
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        alert('Please fill all fields.');
+        return;
+      }
+      // demo feedback
+      alert('Thanks ' + name + '! Your message has been recorded (demo). We will contact you at ' + email + '.');
+      e.target.reset();
+    }
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("2WRd6RIUGbKIFbmfh"); // replace with your real Public Key
+  })();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("2WRd6RIUGbKIFbmfh"); // 🔑 Your Public Key
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_fag0wpj", "template_5fvfkr5", "#contact-form")
+      .then(function() {
+        alert("✅ Message Sent Successfully!");
+      }, function(error) {
+        alert("❌ FAILED..." + JSON.stringify(error));
+        console.error("Error:", error);
+      });
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
